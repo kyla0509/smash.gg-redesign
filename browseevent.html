@@ -1,41 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>smash.gg: Home</title>
+    <title>smash.gg: Browse Events</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
 <script src="scripts/main.js"></script>    
 </head>
     
 <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg"> 
+
 <nav>    
 <div class="topnav" id="myTopnav"> 
-  <a href="index.html" class="active">Home</a>
+  <a href="index.html">Home</a>
   <a href="createevent.html">Create Events</a>
-  <a href="browseevent.html">Browse Events</a>
+  <a href="browseevent.html" class="active">Browse Events</a>
   <a href="contactsupport.html">Contact/Support</a>
   <a href="yourprofile.html" class="right">Your Profile</a> 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>  
-</nav>
-  
-<main>
-    <h1>smash.gg:</h1> 
-    <h2>Empowering esports communities.</h2>
-    <p style="text-align: center"> 
-        <a href="createevent.html" class="button">Create An Event</a> <a class="button" href="browseevent.html" >Browse Events</a>
-    </p>
+</nav>      
     
+<main>
     <section>
-    <h3>Featured Tournaments</h3>    
-    <div class="featuredresponsive">
+    <h1>Browse Events</h1>
+
+    <br>
+    <!-- The form -->
+    <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>    
+    <br>
+
+        <div class="featuredresponsive">
       <div class="featuredtournament">
         <a target="_blank" href="ultimatetournament.html">
           <img src=img/sideways%20uhh.png alt="Cinque Terre" width="1280" height="720">
@@ -106,12 +110,13 @@
           <div class="tournamentdesc"><a href="">Placeholder</a><p>Game: yes! <br>Entrants: number</p></div>
       </div>
     </div>       
-    </section>    
+    </section>  
+    
 </main>
 
 <footer>
     <p>Copyright 2020 - smash.gg.</p>
-</footer>    
+</footer>     
     
 </body>
 </html>
