@@ -5,46 +5,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>smash.gg: name's Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
-</head>
 
-<body>
-    <header>  
-    <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg"> 
-        <nav>    
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="createevent.html">Create Event</a></li>
-          <li><a href="browseevent.html">Browse Events</a></li>
-          <li><a href="contactsupport.html">Contact/Support</a></li>
-          <li style="float: right"><a href="yourprofile.html">Your Profile</a></li>
-        </ul>
-    </nav>
-</header>             
+<script src="scripts/main.js"></script>    
+</head>
+    
+<img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg"> 
+
+<nav>    
+<div class="topnav" id="myTopnav"> 
+  <a href="index.html">Home</a>
+  <a href="createevent.html" >Create Events</a>
+  <a href="browseevent.html">Browse Events</a>
+  <a href="contactsupport.html">Support</a>
+  <a href="yourprofile.html" class="rightActive">Your Profile</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>  
+</nav>      
     
 <main>
-    <h1>User Profile</h1>
-    <h2>notyourusername's Profile (viewing someone else)</h2>
-    
+    <h1>name's Profile</h1>
+    <h2>name | Name's Profile (viewing someone else)</h2>
+
     <section>
-    <div class="profile">
-        <div class="column">
-            <h3>Upcoming Tournaments</h3>
-        </div>
-        <div class="column">
+    <div class="profilerow">
+        <div class="profilecolumn">
+            <h3>Upcoming Tournaments</h3>         
+                  <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/sideways%20uhh.png alt="Detective Pik-uhh-Chu" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">Detective Pik-uhh-chu</a><p>Game: Smash Ultimate <br>Entrants: 200</p></div>
+                </div> 
+            <br>
+                  <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/2placeholder.png alt="2" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">Placeholder</a><p>Game: Name <br>Entrants: Yes!</p></div>
+                </div>             
+        </div>        
+        <div class="profilecolumn">
             <h3>Past Tournaments</h3>
+                 <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/3placeholder.png alt="3" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">Placeholder</a><p>Game: Smash Ultimate <br>Entrants: 200</p></div>
+                </div> 
+            <br>
+                  <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/4placeholder.png alt="4" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">Placeholder</a><p>Game: Name <br>Entrants: Yes!</p></div>
+                </div>                             
         </div> 
-        <div class="column">
+        <div class="profilecolumn">
             <h3>Recent Placements</h3>
+                 <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/5placeholder.png alt="5" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">1st Place @ Placeholder</a><p>Game: Smash Ultimate <br>Entrants: 200</p></div>
+                </div> 
+            <br>
+                  <div class="featuredtournament">
+                    <a target="_blank" href="ultimatetournament.html">
+                      <img src=img/6placeholder.png alt="6" width="1280" height="720">
+                    </a>
+                      <div class="tournamentdesc"><a href="ultimatetournament.html">2nd Place @ Placeholder</a><p>Game: Name <br>Entrants: Yes!</p></div>
+                </div>                
         </div>
     </div>
-    </section>
-
+    </section> 
 </main>
 
 <footer>
-    <br>
     <p>Copyright 2020 - smash.gg.</p>
 </footer>     
     

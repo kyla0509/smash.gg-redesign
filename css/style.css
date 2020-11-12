@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+body, html {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
     color: black;
     background-color: white;
+    margin: 0;
 }
 
 h1 {
@@ -95,15 +100,15 @@ ul {
 
 .topnav {
   overflow: hidden;
-  background-color: #dddddd;
+  background-color: #cb333b;
 }
 
 .topnav a {
     font-family: 'Roboto';
-    font-weight: 500;
+    font-weight: 400;
     float: left;
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -112,12 +117,13 @@ ul {
 }
 
 .topnav a:hover {
-    background-color: #cb333b;
+    background-color: black;
     color: white;
 }
 
 .topnav a.active {
-    background-color: #cb333b;
+    background-color: black;
+    font-weight: 700;
     color: white;
 }
 
@@ -127,7 +133,8 @@ ul {
 
 .topnav a.rightActive {
   float: right;
-  background-color: #cb333b;
+  background-color: black;
+  font-weight: 700;
   color: white;
 }
 
@@ -136,6 +143,78 @@ ul {
 }
 
 /* ----- UTILITIES CLASSES ----- */
+/* The hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("evo.jpg");
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text h1{
+    text-align: center;
+    font-family: 'Teko', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    font-size: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    position: absolute;
+}
+
+.hero-text h2{
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    position: absolute;
+}
+
+.h-button1 {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cb333b; 
+    border-radius: 8px;
+    color: white;
+    padding-right: 90px;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.h-button2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 69%;
+    left: 50%;
+    background-color: #cb333b; 
+    border-radius: 8px;
+    color: white;
+    padding-right: 90px;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.h-button1:hover{
+    background-color: black;
+}
+
+.h-button2:hover{
+    background-color: black;
+}
+
 .button {
   background-color: #cb333b; 
   border-radius: 8px;
@@ -183,6 +262,11 @@ ul {
     padding: 10px;
 }
 
+.profilecolumn h3 {
+    text-align:  center;
+}
+
+
 .profilerow:after {
     content: "";
     display: table;
@@ -223,12 +307,13 @@ div.tournamentdesc a {
   box-sizing: border-box;
 }
 
-
+div.logo img {
+    position: relative;
+    top: 3px;
+    left: 9px;
+}
 
 /* ----- FORMS ----- */
-/* Style inputs, select elements and textareas */
-
-/* Style the search field */
 form.example input[type=text] {
   padding: 10px;
   font-size: 17px;
@@ -398,8 +483,36 @@ input[type=submit] {
   width: 24.99999%;
 }
 
+@media only screen and (max-width: 1000px) {
+    .hero-text h1 {
+        font-size: 70px;
+         position: absolute;
+         top: 42%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+    }
+    
+  .hero-text h2 {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  }
+}
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
+  .h-button1 {
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .h-button2 {
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .featuredresponsive {
     width: 49.99999%;
     margin: 6px 0;
