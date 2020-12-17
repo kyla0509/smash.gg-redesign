@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smash.gg: "Detective Pik-uhh-chu"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+
+<script src="scripts/main.js"></script>
+<script src="scripts/login.js"></script>     
+</head>
+    
+<div class="logo">
+    <a target="_blank" href="index.html">
+        <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg">
+    </a>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="https://owd.tcnj.edu/~ramosk10/imm130/2020-12-8/yourprofile.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://d1u1amw606tzwl.cloudfront.net/assets/users/avatar-default-96007ee5610cdc5a9eed706ec0889aec2257a3937d0fbb747cf335f8915f09b2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        
+      <button onclick="yourprofile.html" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+    
+<nav>    
+<div class="topnav" id="myTopnav"> 
+  <a href="index.html">Home</a>
+  <a href="createevent.html">Create Events</a>
+  <a href="browseevent.html">Browse Events</a>
+  <a href="contactsupport.html">Support</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <a href="yourprofile.html" class="right">Your Profile</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>  
+</nav>    
+    
+<main>
+       <div class="tournamentnav">
+        <img src=img/croppedexample.png alt="tournamentbanner">    
+         <a href="Home">Tournament Home</a>
+         <a href="">Events</a>
+         <a href="players.html">Attendees</a>
+         <a href="registration.html">Register</a>
+        </div>
+    <hr>
+
+    <h2>"Detective Pik-uhh-chu" Tournament Information</h2>
+    <section>
+    <div class="tournamentrow">
+        <div class="tournamentcolumn">
+            <h3>Information</h3>  
+            
+            <p>This tournament features the top player: <a href="userprofile.html">Uhh</a>!
+            
+            <h4>Ultimate Stage List:</h4> 
+            <p>Starters: Battlefield^, Final Destination^, Small Battlefield, Smashville, Pokemon Stadium 2, Town and City</p>
+                
+            <p>Counterpicks: Unova Pokemon League, Kalos Pokemon League</p>
+
+            <p>^Any stage may be used in this form but if the form is banned then it cannot be used on any stage. Forms of this type cannot be applied to 2d stages, or Garreg Mach Monastery
+            </p>
+
+            <h4>Stage Banning Steps</h4>
+            <p>First Stage Selection: Smash GG will decide who bans first. Bans go P1, P2, P2, P1. Play on last remaining stage.
+            Winner of match bans 2 stages and loser picks a stage. Winner picks character and then Loser picks character.
+            Repeat step 2 until a winner of the set is determined.</p>
+        </div>
+
+        <div class="tournamentcolumn">
+            <h3>Ruleset</h3>
+            <h4>Reverse Mains:</h4>
+            <p>Each player tells their opponent who their main is. Each player plays as their opponents character. I.e. if player 1 mains Mario, than player 2 has to play Mario. If a player is a dual main, then that player chooses which of the mains they want to play.</p>
+            
+            <p>All other rules from Singles apply.<br>
+            7 Minute Timer<br>
+            3 Stocks for each player<br>
+            Modified DSR - The player picking the stage can not go back to the stage they most recently won on.<br>
+            </p>
+            <h4>Ultimate Singles:</h4>
+            <p>Best of 3 until Winners, Losers, and Grand Finals, which are Best of 5.<br>
+            Modified DSR - The player picking the stage can not go back to the stage they most recently won on.<br>
+    
+            3 stock<br>
+            7 Minute<br>
+            </p>
+        </div> 
+        <div class="tournamentcolumn">
+            <h3>Schedule</h3>
+            
+            <h4>9:00 AM</h4> - Venue Opens
+            
+            <h4>11:00 AM</h4> - Bracket Starts
+            
+            <h4>5:00 PM</h4> - Sidebracket Starts
+            
+            <h4>8:00 PM</h4> - Finals start
+            
+            <h4>11:00 PM</h4> - Venue Closes
+            
+        </div>
+    </div>
+    </section> 
+
+    
+</main>
+
+<footer>
+    <p>Copyright 2020 - smash.gg.</p>
+</footer> 
+    
+</body>
+</html>

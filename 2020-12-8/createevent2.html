@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Detective Pik-uhh-chu": Add Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
+
+<script src="scripts/main.js"></script>
+<script src="scripts/event_added.js"></script>
+<script src="scripts/login.js"></script>     
+</head>
+    
+<div class="logo">
+    <a target="_blank" href="index.html">
+        <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg">
+    </a>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="https://owd.tcnj.edu/~ramosk10/imm130/2020-12-8/yourprofile.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://d1u1amw606tzwl.cloudfront.net/assets/users/avatar-default-96007ee5610cdc5a9eed706ec0889aec2257a3937d0fbb747cf335f8915f09b2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        
+      <button onclick="yourprofile.html" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>    
+
+<nav>    
+<div class="topnav" id="myTopnav"> 
+  <a href="index.html">Home</a>
+  <a href="createevent.html" class="active">Create Events</a>
+  <a href="browseevent.html">Browse Events</a>
+  <a href="contactsupport.html">Support</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  <a href="yourprofile.html" class="right">Your Profile</a> 
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>  
+</nav> 
+    
+<main>
+    <h1>Your Tournament: Add Events</h1>
+    <div class="formcontainer">
+      <form action="/action_page.php">                    
+        <div class="contactformrow">
+            <div class="contactformcol-25">
+                <label for="title">Event Title:</label>
+            </div>
+            <div class="contactformcol-75">
+                <textarea id="title" name="title" placeholder="Put your event title here... (Ex: Ultimate Singles)" style="height:45px"></textarea>
+            </div>
+        </div>           
+      <div class="formrow">
+        <div class="formcol-25">
+          <label for="gamechoice">Choice of Game:</label>
+        </div>
+        <div class="formcol-75">
+          <select id="gamechoice" name="gamechoice">
+            <option value="ssbu">Super Smash Bros. Ultimate</option>
+            <option value="ssbm">Super Smash Bros. Melee</option>
+            <option value="ow">Overwatch</option>
+          </select>
+        </div>
+      </div>
+        <div class="contactformrow">
+            <div class="contactformcol-25">
+                <label for="rules">Your Ruleset:</label>
+            </div>
+            <div class="contactformcol-75">
+                <textarea id="rules" name="rules" placeholder="Write your ruleset here!" style="height:200px"></textarea>
+            </div>
+        </div>           
+        <br>
+          <p style="text-align: center"> 
+              <a href="createevent2.html" class="button">ADD ANOTHER EVENT</a>
+              <a href="tournamentsettings.html" class="button" onclick="return event_added(this);">CONFIRM EVENT</a></p>
+      </form>
+    </div>
+</main>
+
+<footer>
+    <p>Copyright 2020 - smash.gg.</p>
+</footer>     
+    
+</body>
+</html>
