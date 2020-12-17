@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
 
 <script src="scripts/main.js"></script>
+<script src="scripts/search.js"></script>
 <script src="scripts/login.js"></script>     
 </head>
     
@@ -45,8 +46,8 @@
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
-</div>
-    
+</div>    
+
 <nav>    
 <div class="topnav" id="myTopnav"> 
   <a href="index.html">Home</a>
@@ -63,72 +64,41 @@
     
 <main>
        <div class="tournamentnav">
-        <img src=img/croppedexample.png alt="tournamentbanner">    
-         <a href="Home">Tournament Home</a>
+        <img src=img/croppedexample.png alt="tournamentbanner">   
+         <a href="ultimatetournament.html">Tournament Home</a>
          <a href="">Events</a>
          <a href="players.html">Attendees</a>
          <a href="registration.html">Register</a>
         </div>
     <hr>
 
-    <h2>"Detective Pik-uhh-chu" Tournament Information</h2>
-    <section>
-    <div class="tournamentrow">
-        <div class="tournamentcolumn">
-            <h3>Information</h3>  
-            
-            <p>This tournament features the top player: <a href="userprofile.html">Uhh</a>!
-            
-            <h4>Ultimate Stage List:</h4> 
-            <p>Starters: Battlefield^, Final Destination^, Small Battlefield, Smashville, Pokemon Stadium 2, Town and City</p>
-                
-            <p>Counterpicks: Unova Pokemon League, Kalos Pokemon League</p>
+    <h2>"Detective Pik-uhh-chu" Attendees</h2>
 
-            <p>^Any stage may be used in this form but if the form is banned then it cannot be used on any stage. Forms of this type cannot be applied to 2d stages, or Garreg Mach Monastery
-            </p>
+        <input type="text" id="playername" onkeyup="search()" placeholder="Search for names.." title="Type in a name">
 
-            <h4>Stage Banning Steps</h4>
-            <p>First Stage Selection: Smash GG will decide who bans first. Bans go P1, P2, P2, P1. Play on last remaining stage.
-            Winner of match bans 2 stages and loser picks a stage. Winner picks character and then Loser picks character.
-            Repeat step 2 until a winner of the set is determined.</p>
-        </div>
-
-        <div class="tournamentcolumn">
-            <h3>Ruleset</h3>
-            <h4>Reverse Mains:</h4>
-            <p>Each player tells their opponent who their main is. Each player plays as their opponents character. I.e. if player 1 mains Mario, than player 2 has to play Mario. If a player is a dual main, then that player chooses which of the mains they want to play.</p>
-            
-            <p>All other rules from Singles apply.<br>
-            7 Minute Timer<br>
-            3 Stocks for each player<br>
-            Modified DSR - The player picking the stage can not go back to the stage they most recently won on.<br>
-            </p>
-            <h4>Ultimate Singles:</h4>
-            <p>Best of 3 until Winners, Losers, and Grand Finals, which are Best of 5.<br>
-            Modified DSR - The player picking the stage can not go back to the stage they most recently won on.<br>
-    
-            3 stock<br>
-            7 Minute<br>
-            </p>
-        </div> 
-        <div class="tournamentcolumn">
-            <h3>Schedule</h3>
-            
-            <h4>9:00 AM</h4> - Venue Opens
-            
-            <h4>11:00 AM</h4> - Bracket Starts
-            
-            <h4>5:00 PM</h4> - Sidebracket Starts
-            
-            <h4>8:00 PM</h4> - Finals start
-            
-            <h4>11:00 PM</h4> - Venue Closes
-            
-        </div>
-    </div>
-    </section> 
-
-    
+        <table id="myTable">
+          <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Event</th>
+          </tr>
+          <tr>
+            <td><a href="userprofile.html">Uhhncertain</a></td>
+            <td>Ultimate Singles</td>
+          </tr>
+          <tr>
+            <td><a href="userprofile.html">Kykiri</a></td>
+            <td>Reverse Mains</td>
+          </tr>
+          <tr>
+            <td><a href="players.html">TRYDENT</a></td>
+            <td>Ultimate Singles</td>
+          </tr>
+          <tr>
+            <td><a href="players.html">Ticoms</a></td>
+            <td>Reverse Mains, Ultimate Singles</td>
+          </tr>
+        </table>   
+ 
 </main>
 
 <footer>

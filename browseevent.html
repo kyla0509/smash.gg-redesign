@@ -9,17 +9,51 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<script src="scripts/main.js"></script>    
+<script src="scripts/main.js"></script>
+<script src="scripts/login.js"></script>     
 </head>
     
-<img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg"> 
+<div class="logo">
+    <a target="_blank" href="index.html">
+        <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg">
+    </a>
+</div>
 
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="https://owd.tcnj.edu/~ramosk10/imm130/2020-12-8/yourprofile.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://d1u1amw606tzwl.cloudfront.net/assets/users/avatar-default-96007ee5610cdc5a9eed706ec0889aec2257a3937d0fbb747cf335f8915f09b2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        
+      <button onclick="yourprofile.html" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>    
+    
 <nav>    
 <div class="topnav" id="myTopnav"> 
   <a href="index.html">Home</a>
   <a href="createevent.html">Create Events</a>
   <a href="browseevent.html" class="active">Browse Events</a>
   <a href="contactsupport.html">Support</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
   <a href="yourprofile.html" class="right">Your Profile</a> 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -33,7 +67,7 @@
 
     <br>
     <!-- The form -->
-    <form class="example" action="action_page.php">
+    <form class="search" action="#"  style="margin:auto;">
         <input type="text" placeholder="Search..." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>    

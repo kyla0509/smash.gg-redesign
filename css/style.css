@@ -4,15 +4,21 @@
     box-sizing: border-box;
 }
 
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 body, html {
     height: 100%;
+    width: 100%;
 }
 
 body {
     font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
     color: black;
     background-color: white;
-    margin: 0;
+    margin: 0px;
 }
 
 h1 {
@@ -59,15 +65,21 @@ a {
     color: #cb333b;
 }
 
+.registration li {
+    font-size: 16px;
+    list-style-type: disc;
+ }
+
+.registration ul {
+    font-family: 'Roboto';
+    font-weight: 400;
+    list-style-type: disc;
+}
+
 ul {
     font-family: 'Roboto';
     font-weight: 500;
-    text-transform: uppercase;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #dddddd;
 }
 
 /* ----- NAVIGATION ----- */
@@ -123,7 +135,7 @@ ul {
 
 .topnav a.active {
     background-color: black;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
 }
 
@@ -134,7 +146,12 @@ ul {
 .topnav a.rightActive {
   float: right;
   background-color: black;
-  font-weight: 700;
+  font-weight: 500;
+  color: white;
+}
+
+.topnav a.rightnotActive {
+  float: right;
   color: white;
 }
 
@@ -263,9 +280,8 @@ ul {
 }
 
 .profilecolumn h3 {
-    text-align:  center;
+    text-align: center;
 }
-
 
 .profilerow:after {
     content: "";
@@ -273,6 +289,43 @@ ul {
     clear: both;
 }
 
+div.profilecontentimage img {
+    border-radius: 50%;
+    max-width: 100;
+    height: auto;
+    display: flex; 
+    align-items: center;
+}
+
+div.profilecontenttext {
+    padding-left: 20px;
+    margin-top: -200px;
+    margin-left: 230px;
+}
+
+.profilecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilecontainer img {
+    border-radius: 50%;   
+    max-width: 100%;
+}
+
+.profilecontainer h2 {
+    text-align: left;
+}
+
+.profilecontainerimage {
+  flex-basis: 13%
+}
+
+.profilecontainertext {
+  font-size: 20px;
+  padding-left: 20px;
+}
 
 div.infocolumn img {
   width: 100%;
@@ -313,18 +366,167 @@ div.logo img {
     left: 9px;
 }
 
+/* ----- LOGIN ----- */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for login button */
+button {
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    font-size: 17px;
+  background-color: #cb333b;
+  color: white;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #cb333b;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 320px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+/* ----- TABLE ----- */
+#playername {
+  background-image: url('https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
 /* ----- FORMS ----- */
-form.example input[type=text] {
+form.search input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
   float: left;
   width: 80%;
+    margin-top: -0.5px;
   background: #f1f1f1;
 }
 
 /* Style the submit button */
-form.example button {
+form.search button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -336,12 +538,12 @@ form.example button {
   cursor: pointer;
 }
 
-form.example button:hover {
+form.search button:hover {
   background: #cb333b;
 }
 
 /* Clear floats */
-form.example::after {
+form.search::after {
   content: "";
   clear: both;
   display: table;
@@ -475,7 +677,6 @@ input[type=submit] {
   }
 }
 
-
 .featuredresponsive {
   padding: 0 6px;
   padding-bottom: 10px;
@@ -540,6 +741,50 @@ input[type=submit] {
 @media only screen and (max-width: 500px) {
   .profilecolumn {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+        .profilecontainer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .profilecontainer img {
+            border-radius: 50%;   
+            width: 100%;
+        }
+
+        .profilecontainer h2 {
+            font-size: 20px;
+            text-align: left;
+        }
+    
+        .profilecontainer h3 {
+            font-size: 14px;
+            text-align: center
+        }
+
+        .profilecontainerimage {
+          flex-basis: 40%
+        }
+
+        .profilecontainertext {
+          font-size: 16px;
+          padding-left: 20px;
+        }    
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
   }
 }
 

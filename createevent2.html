@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>smash.gg: Detective Pik-uhh-chu: Tournament Settings</title>
+    <title>"Detective Pik-uhh-chu": Add Events</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">    
 
-<script src="scripts/main.js"></script>   
-<script src="scripts/confirm_settings.js"></script> 
+<script src="scripts/main.js"></script>
+<script src="scripts/event_added.js"></script>
 <script src="scripts/login.js"></script>     
 </head>
     
@@ -60,47 +60,18 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>  
-</nav>          
+</nav> 
     
 <main>
-    <h1>Your Tournament: Tournament Settings</h1>
-    <h2>Edit Tournament Settings:</h2>
-    
+    <h1>Your Tournament: Add Events</h1>
     <div class="formcontainer">
-      <form action="/action_page.php"> 
-      <div class="formrow">
-        <div class="formcol-25">
-          <label for="tourneyname">Tournament Name:</label>
-        </div>
-        <div class="formcol-75">
-          <input type="text" id="tourneyname" name="tourneynames" placeholder="Tournament name...">
-        </div>
-      </div>
-    <br>
-      <div class="formrow">
-        <div class="formcol-25">
-          <label for="starteventtime">Start Date:</label>
-        </div>
-        <div class="formcol-75">
-          <input type="datetime-local" id="starteventtime" name="starteventtime">
-        </div>
-      </div> 
-      <div class="formrow">
-        <div class="formcol-25">
-          <label for="endeventtime">End Date:</label>
-        </div>
-        <div class="formcol-75">
-          <input type="datetime-local" id="endeventtime" name="endeventtime">
-        </div>
-      </div>
-    <hr>
-          <h2>Edit Event Settings:</h2>
+      <form action="/action_page.php">                    
         <div class="contactformrow">
             <div class="contactformcol-25">
                 <label for="title">Event Title:</label>
             </div>
             <div class="contactformcol-75">
-                <textarea id="title" name="title" placeholder="Put your event title here!" style="height:45px"></textarea>
+                <textarea id="title" name="title" placeholder="Put your event title here... (Ex: Ultimate Singles)" style="height:45px"></textarea>
             </div>
         </div>           
       <div class="formrow">
@@ -117,19 +88,18 @@
       </div>
         <div class="contactformrow">
             <div class="contactformcol-25">
-                <label for="rules">Ruleset</label>
+                <label for="rules">Your Ruleset:</label>
             </div>
             <div class="contactformcol-75">
                 <textarea id="rules" name="rules" placeholder="Write your ruleset here!" style="height:200px"></textarea>
             </div>
-        </div>          
+        </div>           
         <br>
           <p style="text-align: center"> 
-              <a href="createevent2.html" class="button">ADD NEW EVENT</a>
-              <a href="" class="button" onclick="return confirm_settings(this);">CONFIRM SETTINGS</a></p>
+              <a href="createevent2.html" class="button">ADD ANOTHER EVENT</a>
+              <a href="tournamentsettings.html" class="button" onclick="return event_added(this);">CONFIRM EVENT</a></p>
       </form>
-    </div>    
-    
+    </div>
 </main>
 
 <footer>

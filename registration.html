@@ -9,28 +9,130 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
    
-<script src="scripts/main.js"></script>    
+<script src="scripts/main.js"></script>   
+<script src="scripts/confirm_registration.js"></script>
+<script src="scripts/login.js"></script>     
 </head>
     
-<img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg"> 
+<div class="logo">
+    <a target="_blank" href="index.html">
+        <img src=img/Logotype_-_Red.png width="200" height="40" alt="smash.gg">
+    </a>
+</div>
+
 <nav>    
 <div class="topnav" id="myTopnav"> 
   <a href="index.html" class="active">Home</a>
   <a href="createevent.html">Create Events</a>
   <a href="browseevent.html">Browse Events</a>
   <a href="contactsupport.html">Support</a>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
   <a href="yourprofile.html" class="right">Your Profile</a> 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>  
 </nav>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="https://owd.tcnj.edu/~ramosk10/imm130/2020-12-8/yourprofile.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://d1u1amw606tzwl.cloudfront.net/assets/users/avatar-default-96007ee5610cdc5a9eed706ec0889aec2257a3937d0fbb747cf335f8915f09b2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        
+      <button onclick="yourprofile.html" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>    
     
 <main>
-    <h1>tournamentname's Registration</h1>
-    <h2>Register Here</h2>
-    <p>this is where u register and then u can confirmm and view your tournament</p>
-    <a href="ultimatetournament.html">Your Tournament</a>  
+    <h1>Registration:</h1>
+    <h3>"Detective Pik-uhh-chu" Registration:</h3>
+    <div class="formcontainer">
+      <form action="/action_page.php">
+        <div class="formrow">
+            <div class="formcol-25">
+                <label for="fname">First Name</label>
+                </div>
+            <div class="formcol-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+            </div>
+        </div>
+          <div class="formrow">
+              <div class="formcol-25">
+        <label for="lname">Last Name</label>
+    </div>
+            <div class="formcol-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+        </div>
+    <div class="formrow">
+        <div class="formcol-25">
+            <label for="email">Email</label>
+        </div>
+        <div class="contactformcol-75">
+            <input type="text" id="email" name="emailaddress" placeholder="Your email address">
+            </div>
+        </div>   
+        <br>
+        <hr>         
+      <div class="formrow">
+        <div class="formcol-25">
+            <p><b>CHOOSE YOUR EVENT:</b></p>
+        </div>
+        <div class="formcol-75">
+          <input type="checkbox" id="singles" name="singles" checked>
+          <label for="singles">Ultimate Singles</label>- Must pay $5 for venue fee (if not already paid), and $3 for registration.       
+        </div>
+        <div>
+          <input type="checkbox" id="reverse" name="reverse">
+          <label for="reverse">Reverse Mains</label>- Must pay $5 for venue fee (if not already paid).
+        </div>          
+      </div>
+          <hr>
+          <section>
+              <h3>Other Information:</h3>
+              <p>After receiving feedback from our community, we want to ensure that the tournament runs as smoothly as possible. For this reason, we will now require the use of a LAN adapter for the tournament. If a player asks for a connection test, both players are to send a photo of their Switch home screen to a tournament admin showing that the connection is wired, with their pointer finger in the photo for authenticity. If a player is shown to be playing on Wi-Fi, or is otherwise unable to provide a photo, they will be disqualified from the tournament. If you happen to play someone who you've played with online before, we require that both players take photos of the respective smash tag before and after the set to avoid any potential conflicts with score reports. We hope you'll tune in!</p>
+            </section> 
+            <hr>
+
+          <section>
+              <h2>Checkout:</h2>
+              <h3>Events:</h3>
+              <div class="registration">
+                    <ul>
+                        <li>$3.00 - Ultimate Singles</li>
+                    </ul>
+               <h3>Other Fees:</h3>
+                    <ul>
+                        <li>$5.00 - Venue Fee</li>
+                    </ul>     
+              </div>
+               <h3>Total: $8.00</h3>                
+              <hr>
+                            
+        </section>                          
+          <p style="text-align: center"> 
+              <a href="ultimatetournament.html" class="button" onclick="return confirm_settings(this);">CONFIRM REGISTRATION</a></p>
+      </form>
+    </div>
 </main>
 
 <footer>
